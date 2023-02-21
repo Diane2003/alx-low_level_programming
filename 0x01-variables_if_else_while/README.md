@@ -4,5 +4,5 @@ charts printing
 read my alphabet printing
 alphabt isn't alphabet
 numbers printing
-numbers print programming
+numberz print programming
 
