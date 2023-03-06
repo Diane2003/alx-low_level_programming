@@ -2,25 +2,23 @@
 #include <string.h>
 
 /**
- * _strchr - find char in a string
- * @s: pointer string
- * @c: char to search for
- * Return: pointer to the first occurrence of the character c
-*/
-
-char *_strchr(char *s, char c)
+ * _strspn - gets the length of a prefix substring.
+ *
+ * @s: string.
+ * @accept: number of bytes.
+ * Return:  number of bytes in the initial segment of s.
+ */
+unsigned int _strspn(char *s, char *accept)
 {
-	while (strlen(s))
+	unsigned int i, j;
+
+	for (i = 0; i < strlen(s); i++)
 	{
-		if (*s == c)
+		for (j = 0; accept[j] != s[i]; j++)
 		{
-			return (s);
+			if (accept[j] == '\0')
+				return (i);
 		}
-		else
-			s++;
 	}
-	if (*s == c)
-		return (s);
-	else
-		return ('\0');
+	return (i);
 }
